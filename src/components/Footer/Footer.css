@@ -1,0 +1,191 @@
+/* File: components/Footer/Footer.css */
+
+.footer {
+  font-family: var(--font-heading);
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+/* Logo / descripción */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer-logo-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--footer-blue);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.footer-logo-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--footer-text);
+}
+
+.footer-logo-section .footer-description {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+/* Heading */
+.footer-heading {
+  color: var(--footer-blue);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Links generales */
+.footer-link {
+  display: block;
+  color: #fff;
+  margin-bottom: 0.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--footer-blue);
+  transform: translateX(5px);
+}
+
+/* Contact items (antes .footer-contact-item) ahora convertidos en enlaces */
+.footer-contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;               /* separa icono / texto */
+  margin: 10px 0;
+  color: #ffffff;          /* texto blanco por defecto */
+  text-decoration: none;   /* sin subrayado por defecto */
+  cursor: pointer;
+  outline: none;
+  transition: color 0.18s ease;
+}
+
+/* Icono del contacto */
+.footer-contact-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  display: inline-block;
+  filter: brightness(0) invert(1);
+  object-fit: contain;
+  flex: 0 0 20px;
+}
+
+/* Texto que tendrá la línea animada */
+.footer-contact-text {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  line-height: 1;
+  transition: color 0.18s ease;
+}
+
+/* indicador base (oculto) - pseudo elemento */
+.footer-contact-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;             /* separa la línea del texto */
+  width: 0;
+  height: 1px;
+  background-color: currentColor; /* hereda color (blanco) */
+  transition: width 0.25s ease;
+}
+
+/* hover (solo para dispositivos con hover real — desktop/mouse) */
+@media (hover: hover) {
+  .footer-section .footer-contact-link:hover .footer-contact-text,
+  .footer-section .footer-contact-link:focus-visible .footer-contact-text {
+    color: #ffffff;
+  }
+
+  .footer-section .footer-contact-link:hover .footer-contact-text::after {
+    width: 100%;
+  }
+}
+
+/* focus-visible para accesibilidad (teclado) */
+.footer-section .footer-contact-link:focus-visible .footer-contact-text::after {
+  width: 100%;
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(37, 99, 235, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--footer-text);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background-color: var(--footer-blue);
+  transform: translateY(-3px);
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
+  filter: none;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  text-align: center;
+  color: var(--footer-muted);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.code-element::after {
+  content: "|";
+  animation: cursor-blink 1.2s infinite;
+  color: var(--footer-blue);
+  margin-left: 2px;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}

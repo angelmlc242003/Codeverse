@@ -1,0 +1,61 @@
+/* index.css (global) */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  /* Tipografía */
+  --font-heading: 'IBM Plex Mono', monospace;
+  --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Colores base */
+  --app-background: #0a0a0a; /* fondo negro global */
+  --primary-black: #0a0a0a;
+
+  /* Colores principales */
+  --primary: #000033;
+  --secondary: #0066ff;
+  --accent: #00aaff;
+
+  /* Azul destacado */
+  --primary-blue: #2563eb;
+  --accent-blue: #3b82f6;
+
+  /* Texto */
+  --text: #ffffff;
+  --text-light: #e0e0e0;
+  --muted: #ccc;
+
+  /* Footer */
+  --footer-bg: #000;
+  --footer-text: #fff;
+  --footer-blue: #2563eb;
+  --footer-gray: #cbd5e1;
+  --footer-muted: #64748b;
+
+  /* Navbar */
+  --navbar-bg: #121212;
+  --navbar-text: #ffffff;
+  --navbar-blue-light: #4fc3f7;
+  --navbar-blue-hover: #03a9f4;
+  --navbar-blue-strong: #0066ff;
+}
+
+/* reset global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+/* fondo global */
+body {
+  background: var(--app-background);
+  color: var(--text);
+  font-family: var(--inter-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

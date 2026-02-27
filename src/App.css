@@ -1,0 +1,20 @@
+/* src/App.css */
+.app-container {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  color: #333;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2; /* encima de las partículas */
+  /* bajar la opacidad para que las partículas se vean */
+  background: rgba(255, 255, 255, 0.6); /* antes 0.85 */
+  /* o para testear rápidamente pon: background: transparent; */
+}
+
+.App-content {
+  position: relative;
+  z-index: 2; /* asegurar que esté por encima del canvas */
+}
