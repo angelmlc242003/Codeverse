@@ -67,14 +67,12 @@ exports.handler = async (event) => {
       };
     }
 
-    const params = new URLSearchParams();
-    params.append('secret', secretKey);
-    params.append('response', token);
 
-    const recaptchaResp = await fetchFn('https://www.google.com/recaptcha/api/siteverify', {
-      method: 'POST',
-      body: params
-    });
+     const recaptchaResp = await fetchFn('https://www.google.com/recaptcha/api/siteverify', {
+       method: 'POST',
+       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+       body: `secret=${encodeURIComponent(secretKey)}&response=${encodeURIComponent(token)}`
+     });
 
     if (!recaptchaResp.ok) {
       const text = await recaptchaResp.text();
