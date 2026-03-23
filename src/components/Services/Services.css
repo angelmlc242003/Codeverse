@@ -2,11 +2,10 @@
   min-height: 100vh;
   padding: 120px 40px;
   position: relative;
-  background: #000;
+  background: transparent; /* ← era #000, cambialo a esto */
   color: #fff;
   font-family: var(--font-body);
 }
-
 .bg-grid {
   position: absolute;
   inset: 0;

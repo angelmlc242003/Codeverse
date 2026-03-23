@@ -374,7 +374,6 @@ export default function ContactPage() {
                 <h4>Nuestra ubicación</h4>
                 <p>
                   Ciudad Autónoma de Buenos Aires
-                  <br /> Villa Crespo
                 </p>
               </div>
             </div>

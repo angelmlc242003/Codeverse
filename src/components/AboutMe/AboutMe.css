@@ -11,18 +11,17 @@
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
- 
 }
 
-.text-center { 
-  text-align: center; 
-  margin-bottom: 2rem; 
+.text-center {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.title { 
-  font-size: 2.5rem; 
-  font-weight: 700; 
-  margin-bottom: 1rem; 
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .subtitle {
@@ -32,50 +31,67 @@
   margin: 0 auto;
   font-size: 1.1rem;
 }
-.flex-row { 
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: 2rem; 
-  align-items: center; 
-  margin-bottom: 3rem; 
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
 }
 
-.profile-image img { 
-  width: 100%; 
-  border-radius: 12px; 
+.profile-image img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
 }
 
-.profile-text { 
-  flex: 1; 
+.profile-text {
+  flex: 1;
 }
 
+/* 🔥 AQUÍ ESTÁ EL CAMBIO IMPORTANTE */
 .logo img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 12px; 
+  border-radius: 12px;
+
+  /* ✨ Glow refinado */
+  filter:
+    drop-shadow(0 0 4px rgba(255, 255, 255, 0.35))
+    drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+
+  /* 🔥 mejora de calidad visual */
+  transition: filter 0.4s ease, transform 0.3s ease;
 }
 
-.section-heading { 
-  font-family: var(--font-heading);
-  font-size: 2rem; 
-  font-weight: 700; 
-  margin-bottom: 1rem; 
+.logo img:hover {
+  filter:
+    drop-shadow(0 0 6px rgba(255, 255, 255, 0.5))
+    drop-shadow(0 0 14px rgba(255, 255, 255, 0.25));
 }
 
-.section-heading-center { 
+.section-heading {
   font-family: var(--font-heading);
-  font-size: 2rem; 
-  font-weight: 700; 
-  text-align: center; 
-  margin-bottom: 2rem; 
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-heading-center {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .gradient-text {
   font-family: var(--font-heading);
   background: linear-gradient(90deg, var(--primary-blue), var(--accent-blue));
-  -webkit-background-clip: text; 
-  background-clip: text; 
+  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
@@ -86,45 +102,45 @@
   margin-bottom: 1rem;
 }
 
-.values-grid { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-  gap: 2rem; 
-  margin-bottom: 3rem; 
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .glow-card {
-  background: rgba(17,17,17,0.8);
+  background: rgba(17, 17, 17, 0.8);
   border: 1px solid #23213b;
   border-radius: 12px;
   padding: 2rem;
   transition: all 0.3s ease;
 }
 
-.glow-card:hover { 
-  box-shadow: 0 0 25px rgba(37,99,235,0.5); 
-  transform: translateY(-5px); 
+.glow-card:hover {
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.5);
+  transform: translateY(-5px);
 }
 
-.feature-icon { 
-  width: 60px; 
-  height: 60px; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  background: rgba(168, 168, 219, 0.1); 
-  border-radius: 12px; 
-  margin-bottom: 1rem; 
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(168, 168, 219, 0.1);
+  border-radius: 12px;
+  margin-bottom: 1rem;
 }
 
-.cta-card { 
+.cta-card {
   font-family: var(--font-heading);
-  background: linear-gradient(90deg, rgba(37,99,235,0.2), rgba(59,130,246,0.1)); 
-  border: 1px solid rgba(59,130,246,0.5); 
-  border-radius: 12px; 
-  text-align: center; 
-  padding: 2rem; 
-  margin-bottom: 2rem; 
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.2), rgba(59, 130, 246, 0.1));
+  border: 1px solid rgba(59, 130, 246, 0.5);
+  border-radius: 12px;
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 .cta-card .btn-primary {
@@ -132,7 +148,7 @@
 }
 
 .btn-primary {
-  display: inline-block; 
+  display: inline-block;
   background-color: var(--primary-blue);
   color: white;
   padding: 0.75rem 1.5rem;
@@ -140,10 +156,109 @@
   font-weight: 600;
   border: none;
   cursor: pointer;
-  text-decoration: none; 
+  text-decoration: none;
   transition: background-color 0.3s;
 }
 
-.btn-primary:hover { 
-  background-color: var(--accent-blue); 
+.btn-primary:hover {
+  background-color: var(--accent-blue);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 3rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .flex-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .profile-image,
+  .logo {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .profile-image img,
+  .logo img {
+    display: block;
+    width: min(220px, 70vw);
+    max-width: 220px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
+  }
+
+  /* 🔧 AJUSTE + GLOW REAL */
+  .logo img {
+    transform: translateX(-30px);
+    filter:
+      drop-shadow(0 0 6px rgba(255, 255, 255, 0.5))
+      drop-shadow(0 0 16px rgba(255, 255, 255, 0.3));
+  }
+
+  .profile-text {
+    width: 100%;
+    flex: unset;
+  }
+
+  .section-heading,
+  .section-heading-center {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .glow-card {
+    padding: 1.5rem;
+  }
+
+  .cta-card {
+    padding: 1.5rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@keyframes softGlow {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 4px rgba(255, 255, 255, 0.35))
+      drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 6px rgba(255, 255, 255, 0.45))
+      drop-shadow(0 0 14px rgba(255, 255, 255, 0.25));
+  }
+}
+
+.logo img {
+  animation: softGlow 3s ease-in-out infinite;
 }

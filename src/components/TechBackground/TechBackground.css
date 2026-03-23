@@ -1,0 +1,24 @@
+/* TechBackground.css */
+
+/* Fondo negro en toda la página */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  width: 100%;
+  height: 100%;
+}
+
+/* El canvas ocupa toda la pantalla detrás de todo */
+.tech-background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: block;
+  background: #000;
+}
